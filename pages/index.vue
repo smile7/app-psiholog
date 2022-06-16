@@ -34,11 +34,11 @@
             class="social-icons spinned"
           >
             <a class="item facebook" href="https://www.facebook.com/people/%D0%9F%D0%B5%D1%82%D1%8F-%D0%94%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0/100010592415774" target="_blank">
-              <span><fa :icon="['fab', 'facebook']" /></span>
+              <span><FontAwesomeIcon :icon="['fab', 'facebook']" /><!-- fa :icon="['fas', 'facebook']" /> --></span>
             </a>
             <!-- LINKEDIN DOESNT EXIST -->
             <a class="item linkedin" href="https://www.linkedin.com/in/petya-dimova-bb0898182/" target="_blank">
-              <span><fa :icon="['fab', 'linkedin']" /></span>
+              <span><FontAwesomeIcon :icon="['fab', 'linkedin']" /><!-- <fa :icon="['fas', 'linkedin']" /> --></span>
             </a>
           </div>
           <br>
