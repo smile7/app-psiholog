@@ -192,7 +192,7 @@
           <BaseButton
             class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
           >
-            Погледни календара
+            Виж календара
           </BaseButton>
         </div>
       </BaseSection>
