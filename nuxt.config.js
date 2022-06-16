@@ -29,7 +29,9 @@ export default {
     '~/plugins/fontawesome.js'
   ],
   axios: {
-    baseURL: "http://localhost:8000/api"
+    baseURL: 'http://104.248.18.158/api'
+    // baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:800/api' : 'http://104.248.18.158/api'
+    // baseURL: "http://localhost:8000/api"
   },
   components: true,
   buildModules: [
