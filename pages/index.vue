@@ -381,7 +381,8 @@ import aosMixin from '@/mixins/aos'
 export default {
   name: 'IndexPage',
   mixins: [aosMixin],
-  async asyncData({ $axios, params }) {
+  // THIS:
+  /* async asyncData({ $axios, params }) {
     try {
       const [accordions, steps] = await Promise.all([
         $axios.$get(`/deinosti`),
@@ -397,8 +398,8 @@ export default {
         steps: []
       };
     }
-  },
-  /* 
+  }, */
+  /*  not this
   async asyncData({ $http }) {
     const steps = await $http.$get('http://localhost:8000/api/step')
     console.log(steps)
@@ -410,8 +411,65 @@ export default {
       selected: 0,
       dropdownConcurency: false,
       dropdownCrypto: false,
-      accordions: [],
-      steps: [],
+      accordions: [
+        {
+            "title": "Кризи и проблеми в отношенията",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Сексуални и репродуктивни проблеми",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Трудности в общуването между деца и родители",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Проблеми вследствие на развод",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Помощ при интегриране в социалните групи",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Установяване, справяне и противодействие срещу психически тормоз",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Депресия, тревожност, панически атаки",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Постигане на положителна самооценка при липса на самочувствие",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Справяне със стреса",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        },
+        {
+            "title": "Управление на гнева",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+        }
+      ],
+      steps: [
+        {
+            "title": "Виж календара",
+            "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
+            "image": "http://localhost:8000/media/sign-up.png"
+        },
+        {
+            "title": "Провери свободните часове",
+            "description": "Ще получиш директен достъп до календара ми и ще можеш да видиш кога съм свободна.",
+            "image": "http://localhost:8000/media/fund.png"
+        },
+        {
+            "title": "Запази час",
+            "description": "Натисни върху часа, който те устройва, и напиши името си.",
+            "image": "http://localhost:8000/media/buy-crypto.png"
+        }
+      ],
       showArrow: true,
       lastScrollPosition: 0
     }
