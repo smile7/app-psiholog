@@ -41,19 +41,20 @@ export default {
         return {
             images: [
               {
-                  "image": "http://localhost:8000/media/priemna1.jpg"
+                  "image": "priemna1.jpg"
               },
               {
-                  "image": "http://localhost:8000/media/priemna2.jpg"
+                  "image": "priemna2.jpg"
               },
               {
-                  "image": "http://localhost:8000/media/priemna3.jpg"
+                  "image": "priemna3.jpg"
               },
               {
-                  "image": "http://localhost:8000/media/priemna4.jpg"
+                  "image": "priemna4.jpg"
               },
               {
-                  "image": "http://localhost:8000/media/sgrada.jpg"
+                  "image": "sgrada.jpg"
+                  // "image": "http://localhost:8000/media/sgrada.jpg"
               }
             ]
         };

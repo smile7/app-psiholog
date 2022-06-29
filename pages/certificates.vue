@@ -62,8 +62,6 @@
       </div>
     </section>
 
-
-
       <!-- ============================================-->
       <!-- <section> СТЪПКИ ============================-->
       <section class="py-5">
@@ -102,9 +100,6 @@
           />
         </div>
       </section>
-
-
-
   </div>
 </template>
 
@@ -122,44 +117,44 @@ export default {
           certificates: [
             {
                 "title": "Диплома",
-                "image": "http://localhost:8000/media/sertifikat1.jpg"
+                "image": "sertifikat1.jpg"
             },
             {
                 "title": "Институт по Фамилна Терапия",
-                "image": "http://localhost:8000/media/sertifikat2.jpg"
+                "image": "sertifikat2.jpg"
             },
             {
                 "title": "Хестия",
-                "image": "http://localhost:8000/media/sertifikat3.jpg"
+                "image": "sertifikat3.jpg"
             },
             {
                 "title": "Посока благополучие",
-                "image": "http://localhost:8000/media/sertifikat4.jpg"
+                "image": "sertifikat4.jpg"
             },
             {
                 "title": "Позитивна психотерапия",
-                "image": "http://localhost:8000/media/sertifikat5.jpg"
+                "image": "sertifikat5.jpg"
             },
             {
                 "title": "Практика ВМА",
-                "image": "http://localhost:8000/media/sertifikat6.jpg"
+                "image": "sertifikat6.jpg"
             }
           ],
           steps: [
             {
               "title": "Виж календара",
               "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
-              "image": "http://localhost:8000/media/sign-up.png"
+              "image": "sign-up.png"
             },
             {
               "title": "Провери свободните часове",
               "description": "Ще получиш директен достъп до календара ми и ще можеш да видиш кога съм свободна.",
-              "image": "http://localhost:8000/media/fund.png"
+              "image": "fund.png"
             },
             {
               "title": "Запази час",
               "description": "Натисни върху часа, който те устройва, и напиши името си.",
-              "image": "http://localhost:8000/media/buy-crypto.png"
+              "image": "buy-crypto.png"
             }
           ]
         };

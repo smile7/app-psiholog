@@ -2,7 +2,7 @@
   <div class="col-sm-6 col-lg-4 mb-4">
     <div class="card h-100 shadow card-span rounded-3">
       <!-- <img class="card-img-top rounded-3" src="~/assets/img/galeria/sgrada.jpg" alt="news" /> -->
-      <img :src="`${image.image}`" />
+      <img :src="require(`~/assets/img/galeria/${image.image}`)" alt="gallery" />
     </div>
   </div>
 </template>

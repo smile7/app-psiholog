@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-md-4 text-center">
-    <img :src="`${step.image}`" alt="" />
+    <img :src="require(`~/assets/img/getting-started/${step.image}`)" alt="step" />
     <h3 class="text-xl font-light-black font-semibold">
       {{ step.title }}
     </h3>
