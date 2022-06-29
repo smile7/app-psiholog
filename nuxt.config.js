@@ -24,18 +24,23 @@ export default {
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   plugins: [
-    '~/plugins/smooth-scroll.js',
-    '~/plugins/mdi.js',
-    '~/plugins/fontawesome.js'
+    { src: '~/plugins/smooth-scroll.js' },
+    { src: '~/plugins/mdi.js' },
+    { src: '~/plugins/fontawesome.js' },
+    { src: '~/plugins/theme.js', mode: 'client' },
+    { src: '~/plugins/bootstrap-navbar.js', mode: 'client' },
+    { src: '~/plugins/popper.min.js' },
+    { src: '~/plugins/feather.min.js' },
+    { src: '~/plugins/is.min.js'},
   ],
   axios: {
-    baseURL: 'http://104.248.18.158/api'
+    // baseURL: 'http://104.248.18.158/api'
     // baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:800/api' : 'http://104.248.18.158/api'
-    // baseURL: "http://localhost:8000/api"
+    baseURL: "http://localhost:8000/api"
   },
   components: true,
   buildModules: [
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     '@nuxt/postcss8',
     '@nuxtjs/fontawesome',
   ],
@@ -51,15 +56,4 @@ export default {
       },
     },
   },
-  /**
-  buildDir: 'nuxt-dist',
-   */
- /*  fontawesome: {
-    component: 'Fa',
-    suffix: false,
-    icons: {
-      solid: true,
-      brands: true,
-    },
-  }, */
 }

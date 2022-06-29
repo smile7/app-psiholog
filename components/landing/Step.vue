@@ -1,8 +1,10 @@
 <template>
-  <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
-    <img :src="`${step.image}`" class="max-w-[245px] mx-auto" alt="" />
-    <h3 class="text-xl text-neutral-800 font-semibold">{{ step.title }}</h3>
-    <p class="text-sm text-gray-700 leading-relaxed">
+  <div class="col-12 col-md-4 text-center">
+    <img :src="`${step.image}`" alt="" />
+    <h3 class="text-xl font-light-black font-semibold">
+      {{ step.title }}
+    </h3>
+    <p class="font-light-black">
       {{ step.description }}
     </p>
   </div>
@@ -18,3 +20,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  p {
+    width: 66%;
+    margin: 0 auto;
+  }
+</style>

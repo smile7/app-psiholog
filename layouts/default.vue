@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen font-sans antialiased relative">
+  <!-- <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
       <div
         class="absolute top-0 left-0 w-full h-[100vh] sm:h-[185vh] lg:h-[100vh] cover-gradient-2 sm:cover-gradient"
@@ -12,7 +12,17 @@
 
       <BaseFooter />
     </div>
-  </div>
+  </div> -->
+
+  <main class="main" id="top">
+    <BaseNavbar />
+
+    <div class="main-content-all-pages">
+      <Nuxt />
+    </div>
+
+    <BaseFooter />
+  </main>
 </template>
 <script>
 export default {
