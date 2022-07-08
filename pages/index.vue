@@ -40,8 +40,12 @@
                 </a>
               </div>
 
-              <a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Запази час</a>
-              <a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">Виж сертификати</a>
+              <a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">
+                Запази час
+              </a>
+              <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
+                Виж сертификати
+              </NuxtLink>
             </div>
           </div>
         </div>

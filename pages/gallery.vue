@@ -22,7 +22,27 @@
         </div>
         <div class="container">
           <div class="row">
-            <Gallery v-for="image in images" :key="image.index" :image="image" />
+            <!-- <Gallery v-for="image in images" :key="image.index" :image="image" /> -->
+            <client-only>
+              <LightGallery
+                  :images="images"
+                  :index="index"
+                  :disable-scroll="true"
+                  @close="index = null"
+                />
+                <div    
+                  v-for="(thumb, thumbIndex) in images"
+                  :key="thumbIndex"
+                  @click="index = thumbIndex"
+                  class="col-sm-6 col-lg-4 mb-4"
+                >
+                <div class="card h-100 shadow card-span rounded-3">
+                  <!-- <img class="card-img-top rounded-3" src="~/assets/img/galeria/sgrada.jpg" alt="news" /> -->
+                  <!-- <img :src="require(`~/assets/img/galeria/${image.image}`)" alt="gallery" /> -->
+                  <img class="card-img-top rounded-top-3" :src="thumb.url" alt="photo" />
+                </div>
+              </div>
+            </client-only>
           </div>
         </div>
       </section>
@@ -41,22 +61,23 @@ export default {
         return {
             images: [
               {
-                  "image": "priemna1.jpg"
+                "url": "/_nuxt/assets/img/galeria/priemna1.jpg"
               },
               {
-                  "image": "priemna2.jpg"
+                "url": "/_nuxt/assets/img/galeria/priemna2.jpg"
               },
               {
-                  "image": "priemna3.jpg"
+                "url": "/_nuxt/assets/img/galeria/priemna3.jpg"
               },
               {
-                  "image": "priemna4.jpg"
+                "url": "/_nuxt/assets/img/galeria/priemna4.jpg"
               },
               {
-                  "image": "sgrada.jpg"
+                "url": "/_nuxt/assets/img/galeria/sgrada.jpg"
                   // "image": "http://localhost:8000/media/sgrada.jpg"
               }
-            ]
+            ],
+            index: null
         };
     },
     components: { Gallery }

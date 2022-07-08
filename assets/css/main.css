@@ -18556,9 +18556,9 @@ ul {
   color: #283779;
   text-transform: uppercase;
 }
-body {
+/* body {
   padding-top: 80px;
-}
+} */
 .font-black {
   color: #000;
 }
@@ -18588,6 +18588,9 @@ ul.accordion-dropdown li button {
   border: none;
 }
 
+  .card .card-img-top {
+    cursor: pointer;
+  }
 
 
 .appointment-steps img.arrow1 {

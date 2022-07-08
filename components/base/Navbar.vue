@@ -1,6 +1,7 @@
 <template>
+  <!-- fixed-top class on nav -->
   <nav 
-    class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" 
+    class="navbar navbar-expand-lg navbar-light py-3 d-block" 
     data-navbar-on-scroll="data-navbar-on-scroll"
   >
     <div class="container">
@@ -11,15 +12,15 @@
       <button 
         class="navbar-toggler"
         type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarSupportedContent" 
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
         aria-controls="navbarSupportedContent" 
         aria-expanded="false" 
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"> </span>
       </button>
-      <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0 text-center" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
           <li class="nav-item px-2">
             <NuxtLink to="/" class="nav-link">Начало</NuxtLink>

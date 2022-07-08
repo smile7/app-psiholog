@@ -49,15 +49,40 @@
       </div>
     </section>
 
+    <!-- ============================================-->
+    <!-- <section> СЕРТИФИКАТИ ГАЛЕРИЯ ============================-->
     <section>
       <div 
           class="bg-holder bg-size"
-              :style="{'background-image':`url(${require('@/assets/img/gallery/cta-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
+          :style="{'background-image':`url(${require('@/assets/img/gallery/cta-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
       >
       </div>
       <div class="container">
         <div class="row">
-          <Certificate v-for="certificate in certificates" :key="certificate.index" :certificate="certificate" />
+          <!-- <Certificate v-for="certificate in certificates" :key="certificate.index" :certificate="certificate" /> -->
+          <client-only>
+            <LightGallery
+                :images="certificates"
+                :index="index"
+                :disable-scroll="true"
+                @close="index = null"
+              />
+              <div    
+                v-for="(thumb, thumbIndex) in certificates"
+                :key="thumbIndex"
+                @click="index = thumbIndex"
+                class="col-sm-6 col-lg-4 mb-4"
+              >
+                <div class="card h-100 shadow card-span rounded-3">
+                    <img class="card-img-top rounded-top-3" :src="thumb.url" alt="certificate" />
+                    <div class="card-body">
+                      <h5 class="font-base fs-lg-0 fs-xl-1 my-3">
+                        {{ thumb.title }}
+                      </h5>
+                    </div>
+                </div>
+            </div>
+          </client-only>
         </div>
       </div>
     </section>
@@ -104,7 +129,7 @@
 </template>
 
 <script>
-import Certificate from "../components/Certificate.vue";
+import Certificate from "../components/Certificate.vue"
 
 export default {
     /* async asyncData({ $http }) {
@@ -117,29 +142,30 @@ export default {
           certificates: [
             {
                 "title": "Диплома",
-                "image": "sertifikat1.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat1.jpg"
             },
             {
                 "title": "Институт по Фамилна Терапия",
-                "image": "sertifikat2.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat2.jpg"
             },
             {
                 "title": "Хестия",
-                "image": "sertifikat3.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat3.jpg"
             },
             {
                 "title": "Посока благополучие",
-                "image": "sertifikat4.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat4.jpg"
             },
             {
                 "title": "Позитивна психотерапия",
-                "image": "sertifikat5.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat5.jpg"
             },
             {
                 "title": "Практика ВМА",
-                "image": "sertifikat6.jpg"
+                "url": "/_nuxt/assets/img/galeria/sertifikat6.jpg"
             }
           ],
+          index: null,
           steps: [
             {
               "title": "Виж календара",
@@ -159,7 +185,14 @@ export default {
           ]
         };
     },
-    components: { Certificate }
+    components: { Certificate },
+    methods: {
+      close(e) {
+        this.index=null
+        console.log('in')
+        console.log(e)
+      }
+    }
 }
 </script>
 
@@ -169,5 +202,9 @@ export default {
   }
   h4 {
     margin-bottom: 20px;
+  }
+  .card .card-img-top {
+    height: 340px;
+    object-fit: scale-down;
   }
 </style>
