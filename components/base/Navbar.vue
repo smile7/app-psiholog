@@ -35,7 +35,7 @@
             <NuxtLink to="/blog" class="nav-link">Блог</NuxtLink>
           </li>
           <li class="nav-item px-2">
-            <NuxtLink to="/contacts" class="nav-link">Контакти</NuxtLink>
+            <NuxtLink to="/contact" class="nav-link">Контакти</NuxtLink>
           </li>
         </ul>
         <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#!">

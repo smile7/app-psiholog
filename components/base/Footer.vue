@@ -62,7 +62,7 @@
                   <NuxtLink to="/gallery" class="footer-link">Галерия</NuxtLink>
                 </li>
                 <li class="lh-lg">
-                  <NuxtLink to="/contacts" class="footer-link">Контакти</NuxtLink>
+                  <NuxtLink to="/contact" class="footer-link">Контакти</NuxtLink>
                 </li>
               </ul>
             </div>
