@@ -47,7 +47,7 @@
                 Направете го за семейството си!
               </p>
               <div class="py-3">
-                <a class="btn btn-lg btn-light rounded-pill" href="#!" role="button">
+                <a class="btn btn-lg btn-light rounded-pill" href="/" role="button">
                   Запиши час
                 </a>
               </div>
@@ -72,17 +72,17 @@
               </h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     Стъпки за усъвърш...
                   </a>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     Какво да направим...
                   </a>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     Съвети за добра ко...
                   </a>
                 </li>
@@ -94,17 +94,17 @@
               </h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     Условия за ползване
                   </a>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     Бисквитки
                   </a>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="#!">
+                  <a class="footer-link" href="/">
                     GDPR
                   </a>
                 </li>

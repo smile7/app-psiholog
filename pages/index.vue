@@ -40,7 +40,7 @@
                 </a>
               </div>
 
-              <a class="btn btn-lg btn-primary rounded-pill" href="#!" role="button">
+              <a class="btn btn-lg btn-primary rounded-pill" href="/" role="button">
                 Запази час
               </a>
               <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
@@ -78,47 +78,47 @@
       <section class="py-0">
         <div class="container">
           <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start" @click="goto('reality')">
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('reality')">
               <div class="d-flex flex-column align-items-center">
                 <div class="icon-box text-center">
-                  <a class="text-decoration-none" href="#!">
+                  <div class="text-decoration-none">
                     <img class="mb-3 deparment-icon" src="~/assets/img/realnost-link.png" alt="..." />
                     <img class="mb-3 deparment-icon-hover" src="~/assets/img/realnost-link.png" alt="..." />
                     <p class="fs-1 fs-xxl-2 text-center">Реалност</p>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start" @click="goto('initiative')">
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('initiative')">
               <div class="d-flex flex-column align-items-center">
                 <div class="icon-box text-center">
-                  <a class="text-decoration-none" href="#!">
+                  <div class="text-decoration-none">
                     <img class="mb-3 deparment-icon" src="~/assets/img/iniciativa-link.png" alt="..." />
                     <img class="mb-3 deparment-icon-hover" src="~/assets/img/iniciativa-link.png" alt="..." />
                     <p class="fs-1 fs-xxl-2 text-center">Инициатива</p>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start"  @click="goto('analysis')">
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer"  @click="goto('analysis')">
               <div class="d-flex flex-column align-items-center">
                 <div class="icon-box text-center">
-                  <a class="text-decoration-none" href="#!">
+                  <div class="text-decoration-none">
                     <img class="mb-3 deparment-icon" src="~/assets/img/analiz-link.png" alt="..." />
                     <img class="mb-3 deparment-icon-hover" src="~/assets/img/analiz-link.png" alt="..." />
                     <p class="fs-1 fs-xxl-2 text-center">Анализ</p>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start" @click="goto('solution')">
+            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('solution')">
               <div class="d-flex flex-column align-items-center">
                 <div class="icon-box text-center">
-                  <a class="text-decoration-none" href="#!">
+                  <div class="text-decoration-none">
                     <img class="mb-3 deparment-icon" src="~/assets/img/reshenie-link.png" alt="..." />
                     <img class="mb-3 deparment-icon-hover" src="~/assets/img/reshenie-link.png" alt="..." />
                     <p class="fs-1 fs-xxl-2 text-center">Решение</p>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@
             </div>
           </section>
           <div class="py-3 text-center">          
-            <a class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" href="#!">
+            <a class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" href="/">
               {{ phase.btn_text }}
             </a>
           </div>

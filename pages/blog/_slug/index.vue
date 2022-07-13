@@ -14,7 +14,18 @@
           </div>
         </div>
       </section>
-      <section>
+
+      <!-- TODO: Styling 
+            - header image
+            - right articles available
+            - created at, author, image of author
+            - important quotes
+            - bullets
+            - hr
+            - share btn
+      -->
+
+      <section class="pt-0">
         <div 
             class="bg-holder bg-size"
             :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -23,7 +34,8 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-                {{ post.content }}
+                <!-- <img :src="post.image" alt="blog image" /> -->
+                <span v-html="`${post.content}`"></span>
             </div>
           </div>
         </div>
@@ -33,17 +45,17 @@
 
 <script>
 export default {
-    head() {
+    /* head() {
         return {
-            title: "View Recipe"
+            title: ""
         }
-    },
+    }, */
     async asyncData({ $axios, params }) {
         try {
-            let posts = await $axios.$get(`/post/${params.id}`);
-            return { posts };
+            let post = await $axios.$get(`/post/${params.slug}/`)
+            return { post };
         } catch (e) {
-            return { posts: [] };
+            return { post: [] };
         }
     },
     data() {

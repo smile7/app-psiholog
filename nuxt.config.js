@@ -21,14 +21,15 @@ export default {
       { type: 'text/javascript', src: "https://code.jquery.com/jquery-3.6.0.min.js" },
       { type: 'text/javascript', src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" },
       // { type: 'text/javascript', src: 'js/bootstrap-navbar.js', body: true },
-      { type: 'text/javascript', src: 'js/feather.min.js', body: true },
-      { type: 'text/javascript', src: 'js/is.min.js', body: true },
-      { type: 'text/javascript', src: 'js/popper.min.js', body: true },
-      { type: 'text/javascript', src: 'js/theme.js', body: true },
+      // { type: 'text/javascript', src: 'js/feather.min.js', body: true },
+      // { type: 'text/javascript', src: 'js/is.min.js', body: true },
+      // { type: 'text/javascript', src: 'js/popper.min.js', body: true },
+      // { type: 'text/javascript', src: 'js/theme.js', body: true },
     ]
   },
   css: [
     '@/assets/css/main.css',
+    '@/assets/css/Exo.css',
     'aos/dist/aos.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],

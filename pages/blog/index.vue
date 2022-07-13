@@ -34,7 +34,7 @@
                     <span class="fs--1 text-900">{{ post.created_on }}</span>
                     <span class="fs--1"></span>
                   <h5 class="font-base fs-lg-0 fs-xl-1 my-3">{{ post.title }}</h5>
-                    <nuxt-link :to="`/blog/${post.id}/`" class="stretched-link">
+                    <nuxt-link :to="`/blog/${post.slug}/`" class="stretched-link">
                         прочети
                     </nuxt-link>
                 </div>

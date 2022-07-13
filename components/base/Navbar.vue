@@ -38,7 +38,7 @@
             <NuxtLink to="/contact" class="nav-link">Контакти</NuxtLink>
           </li>
         </ul>
-        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="#!">
+        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="/">
           Запиши час
         </a>
       </div>
