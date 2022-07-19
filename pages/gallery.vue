@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-12 py-3">
             <div 
-              class="bg-holder bg-size"
-              :style="{'background-image':`url(${require('@/assets/img/gallery/gallery-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+              class="opacity-50 bg-holder bg-size"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/gallery-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
             >
             </div>
             <h1 class="text-center">Галерия</h1>
@@ -57,9 +57,14 @@ export default {
       const images = await $http.$get('http://localhost:8000/api/gallery')
       return { images }
     }, */
+    scrollToTop: true,
     data() {
         return {
             images: [
+              {
+                "url": "/_nuxt/assets/img/galeria/sgrada.jpg"
+                  // "image": "http://localhost:8000/media/sgrada.jpg"
+              },
               {
                 "url": "/_nuxt/assets/img/galeria/priemna1.jpg"
               },
@@ -73,8 +78,16 @@ export default {
                 "url": "/_nuxt/assets/img/galeria/priemna4.jpg"
               },
               {
-                "url": "/_nuxt/assets/img/galeria/sgrada.jpg"
-                  // "image": "http://localhost:8000/media/sgrada.jpg"
+                "url": "/_nuxt/assets/img/galeria/priemna5.jpg"
+              },
+              {
+                "url": "/_nuxt/assets/img/galeria/priemna6.jpg"
+              },
+              {
+                "url": "/_nuxt/assets/img/galeria/priemna7.jpg"
+              },
+              {
+                "url": "/_nuxt/assets/img/galeria/priemna8.jpg"
               }
             ],
             index: null

@@ -41,19 +41,19 @@
             <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0">
               <NuxtLink to="/" class="text-decoration-none">
                 <!-- <img src="~/assets/img/gallery/footer-logo.png" height="51" alt="" /> -->
-                <span class="text-logo text-light fw-bold">Петя Димова</span>
+                <span class="text-logo  fw-bold">Петя Димова</span>
               </NuxtLink>
-              <p class="text-light my-4">
+              <p class="color-secondary my-4">
                 Направете го за семейството си!
               </p>
               <div class="py-3">
-                <a class="btn btn-lg btn-light rounded-pill" href="/" role="button">
+                <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill" to="/">
                   Запиши час
-                </a>
+                </NuxtLink>
               </div>
             </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
-              <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Основни</h5>
+              <h5 class="lh-lg fw-bold mb-4 font-sans-serif">Основни</h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg">
                   <NuxtLink to="/certificates" class="footer-link">Сертификати</NuxtLink>
@@ -67,46 +67,46 @@
               </ul>
             </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">
+              <h5 class="lh-lg fw-bold  mb-4 font-sans-serif">
                 Блог
               </h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     Стъпки за усъвърш...
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     Какво да направим...
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     Съвети за добра ко...
-                  </a>
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
-              <h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">
+              <h5 class="lh-lg fw-bold mb-4 font-sans-serif">
                 Легалност
               </h5>
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     Условия за ползване
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     Бисквитки
-                  </a>
+                  </NuxtLink>
                 </li>
                 <li class="lh-lg">
-                  <a class="footer-link" href="/">
+                  <NuxtLink class="footer-link" to="/">
                     GDPR
-                  </a>
+                  </NuxtLink>
                 </li>
               </ul>
             </div>

@@ -78,7 +78,7 @@
 body {
   margin: 0;
   font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #1B71A1;
@@ -9640,7 +9640,8 @@ fieldset:disabled .btn {
 }
 
 .bg-secondary {
-  background-color: #1B71A1 !important;
+  background-color: #80AAFA !important;
+  /* background-color: #1B71A1 !important; */
 }
 
 .bg-success {
@@ -18359,14 +18360,19 @@ ul {
   }
 }
 
-.footer-link {
-  color: #B2DDED;
+.blog-shadow {
+  top: -15px;
 }
 
-.footer-link:hover {
+.footer-link {
+  /* color: #B2DDED; */
+  color: #283779;
+}
+
+/* .footer-link:hover {
   color: #FFFEFE;
   text-decoration: none;
-}
+} */
 
 .carousel-indicators li {
   border-radius: 50%;
@@ -18528,9 +18534,13 @@ ul {
   color: #283779;
 }
 
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.footer-link:hover,
+.footer-link:focus {
   color: #1b71a1;
   text-shadow: 0 0 0.05px black;
+  text-decoration: none;
 }
 
 .dropdown-menu {
@@ -18546,7 +18556,12 @@ ul {
 |   User Styles
 -----------------------------------------------*/
 
-/*# sourceMappingURL=theme.css.map */
+.color-black {
+  color: #000;
+}
+.color-secondary {
+  color: #283779;
+}
 
 .pre-line {
   white-space: pre-line;

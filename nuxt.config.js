@@ -12,19 +12,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap',
-      },
     ],
     script: [
       { type: 'text/javascript', src: "https://code.jquery.com/jquery-3.6.0.min.js" },
       { type: 'text/javascript', src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" },
       // { type: 'text/javascript', src: 'js/bootstrap-navbar.js', body: true },
-      // { type: 'text/javascript', src: 'js/feather.min.js', body: true },
-      // { type: 'text/javascript', src: 'js/is.min.js', body: true },
-      // { type: 'text/javascript', src: 'js/popper.min.js', body: true },
-      // { type: 'text/javascript', src: 'js/theme.js', body: true },
     ]
   },
   css: [

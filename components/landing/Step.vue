@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 col-md-4 text-center">
     <img :src="require(`~/assets/img/getting-started/${step.image}`)" alt="step" />
-    <h3 class="text-xl font-light-black font-semibold">
+    <h3 class="text-xl color-secondary font-semibold">
       {{ step.title }}
     </h3>
     <p class="font-light-black">
@@ -25,5 +25,10 @@ export default {
   p {
     width: 66%;
     margin: 0 auto;
+  }
+
+  img {
+    height: 220px;
+    margin-bottom: 30px;
   }
 </style>

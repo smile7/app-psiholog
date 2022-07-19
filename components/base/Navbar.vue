@@ -23,24 +23,24 @@
       <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0 text-center" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
           <li class="nav-item px-2">
-            <NuxtLink to="/" class="nav-link">Начало</NuxtLink>
+            <NuxtLink to="/" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">Начало</NuxtLink>
           </li>
           <li class="nav-item px-2">
-            <NuxtLink to="/certificates" class="nav-link">Сертификати</NuxtLink>
+            <NuxtLink to="/certificates" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">Сертификати</NuxtLink>
           </li>
           <li class="nav-item px-2">
-            <NuxtLink to="/gallery" class="nav-link">Галерия</NuxtLink>
+            <NuxtLink to="/gallery" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">Галерия</NuxtLink>
           </li>
           <li class="nav-item px-2">
-            <NuxtLink to="/blog" class="nav-link">Блог</NuxtLink>
+            <NuxtLink to="/blog" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">Блог</NuxtLink>
           </li>
           <li class="nav-item px-2">
-            <NuxtLink to="/contact" class="nav-link">Контакти</NuxtLink>
+            <NuxtLink to="/contact" data-toggle="collapse" data-target=".navbar-collapse" class="nav-link">Контакти</NuxtLink>
           </li>
         </ul>
-        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="/">
+        <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" to="/" data-toggle="collapse" data-target=".navbar-collapse">
           Запиши час
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </nav>

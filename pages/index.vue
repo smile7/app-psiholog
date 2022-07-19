@@ -4,7 +4,7 @@
     <!-- ===============================================-->
     <div>      
       <section class="py-xxl-10 pb-0" id="home">
-        <div class="bg-holder bg-size" :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg.png')})`, 'background-position':'top center', 'background-size':'cover'}">
+        <div class="bg-holder bg-size" :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg4.png')})`, 'background-position':'top center', 'background-size':'cover'}">
         </div>
         <!--/.bg-holder-->
         <div class="container">
@@ -12,13 +12,13 @@
             <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end">
               <img class="pt-7 pt-md-0 petya-circle" src="~/assets/img/petya-circle.png" alt="hero-header" />
             </div>
-            <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
+            <div class="col-md-7 col-xl-6 col-xxl-5 text-md-start text-center py-6">
               <h1 class="fw-light font-base fs-6 fs-xxl-7">
                 Фамилен Психолог
                 <br/>
                 <strong>Петя Димова</strong>
               </h1>
-              <p class="fs-1 mb-4">
+              <p class="fs-1 mb-4 font-light-black">
                  Петя Димова е практикуващ фамилен психолог и семеен консултант. Работи с двойки и семейства, 
                  провежда индивидуални консултации и терапия. 
               </p>
@@ -31,21 +31,24 @@
                   <span><FontAwesomeIcon :icon="['fab', 'facebook']" /><!-- fa :icon="['fas', 'facebook']" /> --></span>
                 </a>
                 <!-- LINKEDIN DOESNT EXIST -->
+                <!--
                 <a 
                   class="item linkedin" 
                   href="https://www.linkedin.com/in/petya-dimova-bb0898182/" 
                   target="_blank"
                 >
-                  <span><FontAwesomeIcon :icon="['fab', 'linkedin']" /><!-- <fa :icon="['fas', 'linkedin']" /> --></span>
+                  <span><FontAwesomeIcon :icon="['fab', 'linkedin']" /></span>
                 </a>
+                -->
               </div>
-
-              <a class="btn btn-lg btn-primary rounded-pill" href="/" role="button">
-                Запази час
-              </a>
-              <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
-                Виж сертификати
-              </NuxtLink>
+              <div class="action-btns">
+                <NuxtLink to="/" class="btn btn-lg btn-primary rounded-pill" role="button">
+                  Запази час
+                </NuxtLink>
+                <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
+                  Виж сертификати
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
@@ -60,13 +63,12 @@
       <!-- ============================================-->
       <!-- <section> ФАЗИ ============================-->
       <section class="py-5" id="departments">
-
         <div class="container">
           <div class="row">
             <div class="col-12 py-3">
               <div 
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/phases-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-75 bg-holder bg-size"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/phases-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
               >
               </div>
               <h1 class="text-center">Фази на промяната</h1>
@@ -130,45 +132,48 @@
       <!-- <section> ДЕЙНОСТИ ============================-->
 
       <!-- <Phase v-for="(phase, index) in phases" :key="index" :phase="phase" /> -->
-      <div v-for="(phase, index) in phases" :key="index" :phase="phase">
-        <section class="bg-secondary" :ref="`${phase.ref}`">
-            <div 
-              class="bg-holder"
-              :style="{'background-image':`url(${require('@/assets/img/gallery/bg-eye-care.png')})`, 'background-position':'center', 'background-size':'contain'}"
-            >
-            </div>
-            <div class="container">
-              <div class="row align-items-center">
-                <div :class="`col-md-7 col-xxl-6 text-center text-md-start order-${index%2}`">
-                  <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">
-                    {{ phase.title }}
-                  </h2>
-                  <p class="text-light pre-line">
-                    {{ phase.description }}
-                  </p>
-                </div>
-                <div class="col-md-5 col-xxl-6">
-                  <img class="img-fluid" :src="require(`~/assets/img/gallery/${phase.image}`)" alt="..." />
+      <section class="phases">
+        <div v-for="(phase, index) in phases" :key="index" :phase="phase">
+          <section class="bg-secondary" :ref="`${phase.ref}`">
+              <div 
+                class="bg-holder"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/bg-eye-care.png')})`, 'background-position':'center', 'background-size':'contain'}"
+              >
+              </div>
+              <div class="container">
+                <div class="row align-items-center">
+                  <div :class="`col-md-7 col-xxl-6 text-center text-md-start order-md-${index%2} order-2`">
+                    <!-- text-light class removed from title and descr -->
+                    <h2 class="fw-bold mb-4 mt-4 mt-lg-0 color-secondary">
+                      {{ phase.title }}
+                    </h2>
+                    <p class="pre-line font-light-black">
+                      {{ phase.description }}
+                    </p>
+                  </div>
+                  <div class="col-md-5 col-xxl-6">
+                    <img class="img-fluid" :src="require(`~/assets/img/gallery/${phase.image}`)" alt="..." />
+                  </div>
                 </div>
               </div>
+            </section>
+            <div class="py-3 text-center">          
+              <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" to="/">
+                {{ phase.btn_text }}
+              </NuxtLink>
             </div>
-          </section>
-          <div class="py-3 text-center">          
-            <a class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" href="/">
-              {{ phase.btn_text }}
-            </a>
           </div>
-        </div>
-      <!-- ============================================-->
-      <!-- <section> ДЕЙНОСТИ КРАЙ ============================-->
+        </section>
+        <!-- ============================================-->
+        <!-- <section> ДЕЙНОСТИ КРАЙ ============================-->
       
       <section class="py-5">
         <div class="container">
           <div class="row">
             <div class="col-12 py-3">
               <div 
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/deinosti-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-75 bg-holder bg-size deinosti-shadow"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/deinosti-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
               >
               </div>
               <h1 class="text-center">Резюме и дейности</h1>
@@ -184,11 +189,11 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-6 offset-md-3 text-center font-black paragr">
+            <div class="col-12 col-lg-6 offset-lg-3 text-center font-black paragr">
                 Петя Димова е практикуващ Фамилен психолог и Семеен консултант. Провежда индивидуални консултации и терапия. 
                 Работи с двойки, деца и семейства при:
             </div>
-            <div class="col-12 col-md-8 m-auto">
+            <div class="col-12 col-lg-8 m-auto">
               <ul class="accordion-dropdown list-group">
                 <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
               </ul>
@@ -207,8 +212,8 @@
           <div class="row">
             <div class="col-12 py-3">
               <div 
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-75 bg-holder bg-size"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
               >
               </div>
               <h1 class="text-center">Записване на час</h1>
@@ -250,6 +255,7 @@
 import Accordion from '../components/base/Accordion.vue';
 
 export default {
+    scrollToTop: true,
     name: "IndexPage",
     // mixins: [aosMixin],
     // THIS:
@@ -358,17 +364,20 @@ export default {
                 {
                     "title": "Виж календара",
                     "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
-                    "image": "sign-up.png"
+                    "image": "steps1.png"
+                    /* "image": "sign-up.png" */
                 },
                 {
                     "title": "Провери свободните часове",
                     "description": "Ще получиш директен достъп до календара ми и ще можеш да видиш кога съм свободна.",
-                    "image": "fund.png"
+                    "image": "steps2.png"
+                    /* "image": "fund.png" */
                 },
                 {
                     "title": "Запази час",
                     "description": "Натисни върху часа, който те устройва, и напиши името си.",
-                    "image": "buy-crypto.png"
+                    "image": "steps3.png"
+                    /* "image": "buy-crypto.png" */
                 }
             ],
             showArrow: true,
@@ -409,6 +418,10 @@ export default {
     width: 60%;
   }
 
+  .action-buttons .btn {
+    margin-top: 20px;
+  }
+
   @media only screen and (max-width: 768px) {
     .petya-circle {
       width: 100%;
@@ -428,6 +441,10 @@ export default {
   .deinosti .paragr {
     margin-bottom: 3rem;
   }
+
+.deinosti-shadow {
+  top: -12px;
+}
 
 /* SOCIAL ICONS SPIN */
 .social-icons .item {
@@ -540,4 +557,11 @@ export default {
           transform: rotate(45deg) translate(20px,20px);
       }
   }
+
+  @media only screen and (max-width: 1199px) {
+    .arrow-down-animated {
+      display: none;
+    }
+  }
+
 </style>

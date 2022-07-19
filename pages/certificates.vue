@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-12 py-3">
             <div 
-              class="bg-holder bg-size"
-              :style="{'background-image':`url(${require('@/assets/img/gallery/certificates-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+              class="opacity-50 bg-holder bg-size"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/certificates-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
             >
             </div>
             <h1 class="text-center">Сертификати</h1>
@@ -94,8 +94,8 @@
           <div class="row">
             <div class="col-12 py-3">
               <div 
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/blog-post.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-75 bg-holder bg-size"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
                 >
               </div>
               <h1 class="text-center">Записване на час</h1>
@@ -137,6 +137,7 @@ export default {
       console.log(certificates)
       return { certificates }
     }, */
+    scrollToTop: true,
     data() {
         return {
           certificates: [
@@ -170,17 +171,17 @@ export default {
             {
               "title": "Виж календара",
               "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
-              "image": "sign-up.png"
+              "image": "steps1.png"
             },
             {
               "title": "Провери свободните часове",
               "description": "Ще получиш директен достъп до календара ми и ще можеш да видиш кога съм свободна.",
-              "image": "fund.png"
+              "image": "steps2.png"
             },
             {
               "title": "Запази час",
               "description": "Натисни върху часа, който те устройва, и напиши името си.",
-              "image": "buy-crypto.png"
+              "image": "steps3.png"
             }
           ]
         };

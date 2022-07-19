@@ -23,9 +23,9 @@
         </div>
       </section>
       <div class="py-3 text-center">          
-        <a class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" href="/">
+        <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" to="/">
           {{ phase.btn_text }}
-        </a>
+        </NuxtLink>
       </div>
     </div>
 </template>

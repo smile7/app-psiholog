@@ -5,8 +5,8 @@
           <div class="row">
             <div class="col-12 py-3">
               <div 
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/blog-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-50 bg-holder bg-size blog-shadow"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/blog-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
               >
               </div>
               <h1 class="text-center">{{ post.title }}</h1>
@@ -33,7 +33,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 font-light-black">
                 <!-- <img :src="post.image" alt="blog image" /> -->
                 <span v-html="`${post.content}`"></span>
             </div>
@@ -50,6 +50,7 @@ export default {
             title: ""
         }
     }, */
+    scrollToTop: true,
     async asyncData({ $axios, params }) {
         try {
             let post = await $axios.$get(`/post/${params.slug}/`)

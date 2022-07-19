@@ -5,8 +5,8 @@
           <div class="row">
             <div class="col-12 py-3">
               <div
-                class="bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/contacts-shadow.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+                class="opacity-75 bg-holder bg-size"
+                :style="{'background-image':`url(${require('@/assets/img/gallery/contacts-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
               >
               </div>
               <h1 class="text-center">Контакти</h1>
@@ -14,9 +14,9 @@
           </div>
         </div>
       </section>
-       <!-- 
+       
       <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D1%83%D0%BB.%20%D0%A5%D0%B0%D0%B4%D0%B6%D0%B8%20%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%8A%D1%80%2019,%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+(%D0%9F%D0%B5%D1%82%D1%8F%20%D0%94%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="300" frameborder="0"></iframe></div>
-       -->
+      
       <section class="py-8">
         <div class="container">
           <div class="row">
@@ -119,6 +119,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
   name: "Contact",
   props: {
     msg: String
