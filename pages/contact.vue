@@ -14,9 +14,9 @@
           </div>
         </div>
       </section>
-       
+       <!-- 
       <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D1%83%D0%BB.%20%D0%A5%D0%B0%D0%B4%D0%B6%D0%B8%20%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%8A%D1%80%2019,%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+(%D0%9F%D0%B5%D1%82%D1%8F%20%D0%94%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="300" frameborder="0"></iframe></div>
-      
+       -->
       <section class="py-8">
         <div class="container">
           <div class="row">
@@ -124,6 +124,13 @@ export default {
   props: {
     msg: String
   },
+  async mounted() {
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.log(e)
+    }
+  },
   data() {
     return {
       loading: true,
@@ -145,19 +152,33 @@ export default {
     },
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       this.isFormDisabled = true
-      
 
+      // reCaptcha v3 verification
+      try {
+        const token = await this.$recaptcha.execute()
+        const response = await this.$axios.$post(
+          `http://localhost:3000/captcha-api/siteverify?secret=${process.env.SECRET_KEY}&response=${token}`
+        )
+        console.log('response: ', response)
+        await this.sendMessage()
+      } catch (error) {
+        console.log('err: ', error)
+        this.isFormDisabled = false
+        this.$recaptcha.reset()
+      }
+    },
+    async sendMessage() {
       let data = {
         name: this.name,
         phone: this.phone,
         email: this.email,
         subject: this.subject,
         message: this.message
-      };
+      }
       this.$axios
-        .post('/contact/', data, {
+        .post('contact/', data, {
           headers: {
             Accept: "application/json"
           }
@@ -166,7 +187,6 @@ export default {
           response => {
             this.isFormDisabled = false
             this.beforeSubmit = false
-            console.log(response)
         })
         .catch(
           error => {

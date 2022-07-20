@@ -1,6 +1,7 @@
 <template>
   <div class="col-12 col-md-4 text-center">
-    <img :src="require(`~/assets/img/getting-started/${step.image}`)" alt="step" />
+    <!-- <img :src="require(`~/assets/img/getting-started/${step.image}`)" alt="step" /> -->
+    <img :src="step.image" alt="step image" />
     <h3 class="text-xl color-secondary font-semibold">
       {{ step.title }}
     </h3>

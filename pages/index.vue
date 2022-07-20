@@ -4,9 +4,11 @@
     <!-- ===============================================-->
     <div>      
       <section class="py-xxl-10 pb-0" id="home">
-        <div class="bg-holder bg-size" :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg4.png')})`, 'background-position':'top center', 'background-size':'cover'}">
+        <div
+          class="bg-holder bg-size"
+          :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg4.png')})`, 'background-position':'top center', 'background-size':'cover'}"
+        >
         </div>
-        <!--/.bg-holder-->
         <div class="container">
           <div class="row min-vh-xl-100 min-vh-xxl-25">
             <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end">
@@ -143,7 +145,6 @@
               <div class="container">
                 <div class="row align-items-center">
                   <div :class="`col-md-7 col-xxl-6 text-center text-md-start order-md-${index%2} order-2`">
-                    <!-- text-light class removed from title and descr -->
                     <h2 class="fw-bold mb-4 mt-4 mt-lg-0 color-secondary">
                       {{ phase.title }}
                     </h2>
@@ -152,7 +153,7 @@
                     </p>
                   </div>
                   <div class="col-md-5 col-xxl-6">
-                    <img class="img-fluid" :src="require(`~/assets/img/gallery/${phase.image}`)" alt="..." />
+                    <img class="img-fluid" :src="phase.image" alt="phase image" />
                   </div>
                 </div>
               </div>
@@ -198,9 +199,6 @@
                 <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
               </ul>
             </div>
-            <!-- <div class="col-12 col-md-4">
-              <img class="img-fluid rounded-3" src="~/assets/img/psychologist.jpg" alt="kabinet" />
-            </div> -->
           </div>
         </div>
       </section>
@@ -251,15 +249,12 @@
 </template>
 
 <script>
-// import aosMixin from '@/mixins/aos'
 import Accordion from '../components/base/Accordion.vue';
 
 export default {
     scrollToTop: true,
     name: "IndexPage",
-    // mixins: [aosMixin],
-    // THIS:
-    /* async asyncData({ $axios, params }) {
+    async asyncData({ $axios, params }) {
       try {
         const [accordions, steps, phases] = await Promise.all([
           $axios.$get(`/deinosti`),
@@ -270,22 +265,15 @@ export default {
           accordions,
           steps,
           phases
-        };
+        }
       } catch (e) {
         return {
           accordions: [],
           steps: [],
           phases: []
-        };
+        }
       }
-    }, */
-    /*  not this */
-    /* async asyncData({ $http }) {
-      const phases = await $http.$get('http://localhost:8000/api/phase')
-      console.log(phases)
-      return { phases }
     },
-     */
     data() {
         return {
             phases: [
@@ -365,19 +353,16 @@ export default {
                     "title": "Виж календара",
                     "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
                     "image": "steps1.png"
-                    /* "image": "sign-up.png" */
                 },
                 {
                     "title": "Провери свободните часове",
                     "description": "Ще получиш директен достъп до календара ми и ще можеш да видиш кога съм свободна.",
                     "image": "steps2.png"
-                    /* "image": "fund.png" */
                 },
                 {
                     "title": "Запази час",
                     "description": "Натисни върху часа, който те устройва, и напиши името си.",
                     "image": "steps3.png"
-                    /* "image": "buy-crypto.png" */
                 }
             ],
             showArrow: true,

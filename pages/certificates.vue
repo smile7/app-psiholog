@@ -132,16 +132,11 @@
 import Certificate from "../components/Certificate.vue"
 
 export default {
-    /* async asyncData({ $http }) {
-      const certificates = await $http.$get('http://localhost:8000/api/certificate')
-      console.log(certificates)
-      return { certificates }
-    }, */
     scrollToTop: true,
     data() {
         return {
           certificates: [
-            {
+            /* {
                 "title": "Диплома",
                 "url": "/_nuxt/assets/img/galeria/sertifikat1.jpg"
             },
@@ -164,11 +159,11 @@ export default {
             {
                 "title": "Практика ВМА",
                 "url": "/_nuxt/assets/img/galeria/sertifikat6.jpg"
-            }
+            } */
           ],
           index: null,
           steps: [
-            {
+            /* {
               "title": "Виж календара",
               "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
               "image": "steps1.png"
@@ -182,11 +177,28 @@ export default {
               "title": "Запази час",
               "description": "Натисни върху часа, който те устройва, и напиши името си.",
               "image": "steps3.png"
-            }
+            } */
           ]
         };
     },
-    components: { Certificate },
+    async asyncData({ $axios, params }) {
+      try {
+        const [certificates, steps] = await Promise.all([
+          $axios.$get(`certificate/`),
+          $axios.$get(`step/`)
+        ])
+        return {
+          certificates,
+          steps
+        }
+      } catch (e) {
+        console.log(e)
+        return {
+          certificates: [],
+          steps: []
+        }
+      }
+    },
     methods: {
       close(e) {
         this.index=null

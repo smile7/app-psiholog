@@ -54,7 +54,7 @@ export default {
     scrollToTop: true,
     async asyncData({ $axios, params }) {
         try {
-            let posts = await $axios.$get(`/post/`)
+            let posts = await $axios.$get(`post/`)
             // parse date from django
             for (let i=0; i<posts.length; i++) {
               let date = posts[i].created_on.slice(0, 10)
@@ -63,6 +63,7 @@ export default {
             }
             return { posts };
         } catch (e) {
+          console.log(e)
             return { posts: [] };
         }
     },

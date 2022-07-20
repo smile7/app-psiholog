@@ -11,7 +11,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-16.png' },
     ],
     script: [
       { type: 'text/javascript', src: "https://code.jquery.com/jquery-3.6.0.min.js" },
@@ -34,7 +34,20 @@ export default {
   axios: {
     // baseURL: 'http://104.248.18.158/api'
     // baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:800/api' : 'http://104.248.18.158/api'
-    baseURL: "http://localhost:8000/api"
+    proxy: true,
+    prefix: process.env.API_URL
+  },
+  proxy: {
+    "http://localhost:3000/api/captcha-api/": {
+      target: "https://www.google.com/recaptcha/api",
+      pathRewrite: {
+        "^/captcha-api": ""
+      }
+    },
+    /* "/api/": {
+      target: "http://localhost:8000/api/",
+      pathRewrite: { "^/api/": "" }
+    } */
   },
   components: true,
   buildModules: [
@@ -46,7 +59,18 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxt/http',
+    "@nuxtjs/dotenv",
+    [
+       "@nuxtjs/recaptcha",
+      {
+        siteKey: process.env.SITE_KEY,
+      }
+    ],
+    "@nuxtjs/proxy"
   ],
+  recaptcha: {
+    version: 3
+  },
   build: {
     postcss: {
       plugins: {
