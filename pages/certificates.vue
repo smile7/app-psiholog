@@ -129,8 +129,6 @@
 </template>
 
 <script>
-import Certificate from "../components/Certificate.vue"
-
 export default {
     scrollToTop: true,
     data() {

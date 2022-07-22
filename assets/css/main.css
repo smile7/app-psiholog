@@ -17477,8 +17477,8 @@ section {
 
 @media (min-width: 992px) {
   section {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -18615,4 +18615,8 @@ ul.accordion-dropdown li button {
 .appointment-steps img.arrow2 {
   top: 120px;
   right: 490px;
+}
+
+.text-right {
+  text-align: right;
 }
