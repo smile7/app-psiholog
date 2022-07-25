@@ -47,10 +47,6 @@
 
 <script>
 export default {
-    /* async asyncData({ $http }) {
-      const posts = await $http.$get('http://localhost:8000/api/post')
-      return { posts }
-    }, */
     scrollToTop: true,
     async asyncData({ $axios, params }) {
         try {

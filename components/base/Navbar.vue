@@ -1,5 +1,5 @@
 <template>
-  <!-- fixed-top class on nav -->
+  <!-- fixed-top class on nav removed -->
   <nav 
     class="navbar navbar-expand-lg navbar-light py-3 d-block" 
     data-navbar-on-scroll="data-navbar-on-scroll"
@@ -49,6 +49,7 @@
 <script>
 export default {
   name: 'BaseNavbar',
+  scrollToTop: true,
   data() {
     return {}
   },

@@ -31,7 +31,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-2 py-3 font-light-black">
+            <div class="col-12 col-lg-2 py-3 font-light-black d-none d-lg-block">
               <client-only>
                 <LightGallery
                     :images="certificates"
@@ -58,18 +58,6 @@
           </div>
         </div>
       </section>
-
-      <!-- TODO: Styling 
-            - header image
-            - right articles available
-            - created at, author, image of author
-            - important quotes
-            - bullets
-            - hr
-            - share btn
-
-            - NUXT change screens effect
-      -->
       <vue-scroll-indicator
           height="4px"
           color="#283779"
@@ -82,14 +70,6 @@
 <script>
 export default {
     scrollToTop: true,
-    /* async asyncData({ $axios, params }) {
-        try {
-            let post = await $axios.$get(`/post/${params.slug}/`)
-            return { post }
-        } catch (e) {
-            return { post: [] }
-        }
-    }, */
     async asyncData({ $axios, params }) {
       try {
         const [post, certificates] = await Promise.all([

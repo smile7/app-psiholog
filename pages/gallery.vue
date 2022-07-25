@@ -14,49 +14,47 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================-->
+    <!-- <section> ГАЛЕРИЯ ==========================-->
+    <!-- ============================================-->
     <section>
-        <div 
-            class="bg-holder bg-size"
-              :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
-        >
-        </div>
-        <div class="container">
-          <div class="row">
-            <!-- <Gallery v-for="image in images" :key="image.index" :image="image" /> -->
-            <client-only>
-              <LightGallery
-                  :images="images"
-                  :index="index"
-                  :disable-scroll="true"
-                  @close="index = null"
-                />
-                <div    
-                  v-for="(thumb, thumbIndex) in images"
-                  :key="thumbIndex"
-                  @click="index = thumbIndex"
-                  class="col-sm-6 col-lg-4 mb-4"
-                >
-                <div class="card h-100 shadow card-span rounded-3">
-                  <!-- <img class="card-img-top rounded-3" src="~/assets/img/galeria/sgrada.jpg" alt="news" /> -->
-                  <!-- <img :src="require(`~/assets/img/galeria/${image.image}`)" alt="gallery" /> -->
-                  <img class="card-img-top rounded-top-3" :src="thumb.url" alt="photo" />
-                </div>
+      <div 
+        class="bg-holder bg-size"
+        :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
+      >
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- <Gallery v-for="image in images" :key="image.index" :image="image" /> -->
+          <client-only>
+            <LightGallery
+              :images="images"
+              :index="index"
+              :disable-scroll="true"
+              @close="index = null"
+            />
+            <div    
+              v-for="(thumb, thumbIndex) in images"
+              :key="thumbIndex"
+              @click="index = thumbIndex"
+              class="col-sm-6 col-lg-4 mb-4"
+            >
+              <div class="card h-100 shadow card-span rounded-3">
+                <!-- <img class="card-img-top rounded-3" src="~/assets/img/galeria/sgrada.jpg" alt="news" /> -->
+                <!-- <img :src="require(`~/assets/img/galeria/${image.image}`)" alt="gallery" /> -->
+                <img class="card-img-top rounded-top-3" :src="thumb.url" alt="photo" />
               </div>
-            </client-only>
-          </div>
+            </div>
+          </client-only>
         </div>
-      </section>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Gallery from '../components/Gallery.vue';
-
 export default {
-    /* async asyncData({ $http }) {
-      const images = await $http.$get('http://localhost:8000/api/gallery')
-      return { images }
-    }, */
     scrollToTop: true,
     data() {
         return {
@@ -93,7 +91,6 @@ export default {
             index: null
         };
     },
-    components: { Gallery }
 }
 </script>
 

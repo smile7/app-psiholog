@@ -15,6 +15,9 @@
       </div>
     </section>
 
+    <!-- ============================================-->
+    <!-- <section> ОБРАЗОВАНИЕ ======================-->
+    <!-- ============================================-->
     <section>
       <div 
           class="bg-holder bg-size"
@@ -34,7 +37,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 mt-md-0 mt-6">
             <h4 class="text-center">Допълнителна квалификация:</h4>
             <ul class="list-group">
               <li class="list-group-item">
@@ -50,7 +53,8 @@
     </section>
 
     <!-- ============================================-->
-    <!-- <section> СЕРТИФИКАТИ ГАЛЕРИЯ ============================-->
+    <!-- <section> СЕРТИФИКАТИ ГАЛЕРИЯ ==============-->
+    <!-- ============================================-->
     <section>
       <div 
           class="bg-holder bg-size"
@@ -87,44 +91,45 @@
       </div>
     </section>
 
-      <!-- ============================================-->
-      <!-- <section> СТЪПКИ ============================-->
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div 
-                class="opacity-75 bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
-                >
-              </div>
-              <h1 class="text-center">Записване на час</h1>
+    <!-- ============================================-->
+    <!-- <section> СТЪПКИ ===========================-->
+    <!-- ============================================-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-3">
+            <div 
+              class="opacity-75 bg-holder bg-size"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+              >
             </div>
+            <h1 class="text-center">Записване на час</h1>
           </div>
         </div>
-      </section>
-      <section class="appointment-steps">
-        <div 
-            class="bg-holder bg-size"
-            :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
-        >
+      </div>
+    </section>
+    <section class="appointment-steps">
+      <div 
+          class="bg-holder bg-size"
+          :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
+      >
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <LandingStep v-for="step in steps" :key="step.index" :step="step" />
         </div>
-        <div class="container-fluid">
-          <div class="row">
-            <LandingStep v-for="step in steps" :key="step.index" :step="step" />
-          </div>
-          <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="arrow1 position-absolute"
-            alt=""
-          />
-          <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="arrow2 position-absolute"
-            alt=""
-          />
-        </div>
-      </section>
+        <img
+          :src="require('~/assets/img/getting-started/arrow.png')"
+          class="arrow1 position-absolute"
+          alt=""
+        />
+        <img
+          :src="require('~/assets/img/getting-started/arrow.png')"
+          class="arrow2 position-absolute"
+          alt=""
+        />
+      </div>
+    </section>
   </div>
 </template>
 

@@ -1,251 +1,249 @@
 <template>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <div>      
-      <section class="py-xxl-10 pb-0" id="home">
-        <div
-          class="bg-holder bg-size"
-          :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg4.png')})`, 'background-position':'top center', 'background-size':'cover'}"
-        >
-        </div>
-        <div class="container">
-          <div class="row min-vh-xl-100 min-vh-xxl-25">
-            <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end">
-              <img class="pt-7 pt-md-0 petya-circle" src="~/assets/img/petya-circle.png" alt="hero-header" />
-            </div>
-            <div class="col-md-7 col-xl-6 col-xxl-5 text-md-start text-center py-6">
-              <h1 class="fw-light font-base fs-6 fs-xxl-7">
-                Фамилен Психолог
-                <br/>
-                <strong>Петя Димова</strong>
-              </h1>
-              <p class="fs-1 mb-4 font-light-black">
-                 Петя Димова е практикуващ фамилен психолог и семеен консултант. Работи с двойки и семейства, 
-                 провежда индивидуални консултации и терапия. 
-              </p>
-              <div class="social-icons spinned mb-4">
-                <a 
-                  class="item facebook" 
-                  href="https://www.facebook.com/people/%D0%9F%D0%B5%D1%82%D1%8F-%D0%94%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0/100010592415774" 
-                  target="_blank"
-                >
-                  <span><FontAwesomeIcon :icon="['fab', 'facebook']" /><!-- fa :icon="['fas', 'facebook']" /> --></span>
-                </a>
-                <!-- LINKEDIN DOESNT EXIST -->
-                <!--
-                <a 
-                  class="item linkedin" 
-                  href="https://www.linkedin.com/in/petya-dimova-bb0898182/" 
-                  target="_blank"
-                >
-                  <span><FontAwesomeIcon :icon="['fab', 'linkedin']" /></span>
-                </a>
-                -->
-              </div>
-              <div class="action-btns">
-                <NuxtLink to="/" class="btn btn-lg btn-primary rounded-pill" role="button">
-                  Запази час
-                </NuxtLink>
-                <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
-                  Виж сертификати
-                </NuxtLink>
-              </div>
-            </div>
+  <div>      
+    <section class="py-xxl-10 pb-0" id="home">
+      <div
+        class="bg-holder bg-size"
+        :style="{'background-image':`url(${require('@/assets/img/gallery/hero-bg4.png')})`, 'background-position':'top center', 'background-size':'cover'}"
+      >
+      </div>
+      <div class="container">
+        <div class="row min-vh-xl-100 min-vh-xxl-25">
+          <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end">
+            <img class="pt-7 pt-md-0 petya-circle" src="~/assets/img/petya-circle.png" alt="hero-header" />
           </div>
-        </div>
-
-        <div class="arrow-down-animated" :class="{ 'arrow--hidden': !showArrow }">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </section>
-
-      <!-- ============================================-->
-      <!-- <section> ФАЗИ ============================-->
-      <section class="py-5" id="departments">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div 
-                class="opacity-75 bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/phases-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+          <div class="col-md-7 col-xl-6 col-xxl-5 text-md-start text-center py-6">
+            <h1 class="fw-light font-base fs-6 fs-xxl-7">
+              Фамилен Психолог
+              <br/>
+              <strong>Петя Димова</strong>
+            </h1>
+            <p class="fs-1 mb-4 font-light-black">
+               Петя Димова е практикуващ фамилен психолог и семеен консултант. Работи с двойки и семейства, 
+               провежда индивидуални консултации и терапия. 
+            </p>
+            <div class="social-icons spinned mb-4">
+              <a 
+                class="item facebook" 
+                href="https://www.facebook.com/people/%D0%9F%D0%B5%D1%82%D1%8F-%D0%94%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0/100010592415774" 
+                target="_blank"
               >
-              </div>
-              <h1 class="text-center">Фази на промяната</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-0">
-        <div class="container">
-          <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('reality')">
-              <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center">
-                  <div class="text-decoration-none">
-                    <img class="mb-3 deparment-icon" src="~/assets/img/realnost-link.png" alt="..." />
-                    <img class="mb-3 deparment-icon-hover" src="~/assets/img/realnost-link.png" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Реалност</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('initiative')">
-              <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center">
-                  <div class="text-decoration-none">
-                    <img class="mb-3 deparment-icon" src="~/assets/img/iniciativa-link.png" alt="..." />
-                    <img class="mb-3 deparment-icon-hover" src="~/assets/img/iniciativa-link.png" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Инициатива</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer"  @click="goto('analysis')">
-              <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center">
-                  <div class="text-decoration-none">
-                    <img class="mb-3 deparment-icon" src="~/assets/img/analiz-link.png" alt="..." />
-                    <img class="mb-3 deparment-icon-hover" src="~/assets/img/analiz-link.png" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Анализ</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('solution')">
-              <div class="d-flex flex-column align-items-center">
-                <div class="icon-box text-center">
-                  <div class="text-decoration-none">
-                    <img class="mb-3 deparment-icon" src="~/assets/img/reshenie-link.png" alt="..." />
-                    <img class="mb-3 deparment-icon-hover" src="~/assets/img/reshenie-link.png" alt="..." />
-                    <p class="fs-1 fs-xxl-2 text-center">Решение</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================================-->
-      <!-- <section> ДЕЙНОСТИ ============================-->
-
-      <!-- <Phase v-for="(phase, index) in phases" :key="index" :phase="phase" /> -->
-      <section class="phases">
-        <div v-for="(phase, index) in phases" :key="index" :phase="phase">
-          <section class="bg-secondary" :ref="`${phase.ref}`">
-              <div 
-                class="bg-holder"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/bg-eye-care.png')})`, 'background-position':'center', 'background-size':'contain'}"
+                <span>
+                  <FontAwesomeIcon :icon="['fab', 'facebook']" /><!-- fa :icon="['fas', 'facebook']" /> -->
+                </span>
+              </a>
+              <!-- LINKEDIN DOESNT EXIST -->
+              <!--
+              <a 
+                class="item linkedin" 
+                href="https://www.linkedin.com/in/petya-dimova-bb0898182/" 
+                target="_blank"
               >
-              </div>
-              <div class="container">
-                <div class="row align-items-center">
-                  <div :class="`col-md-7 col-xxl-6 text-center text-md-start order-md-${index%2} order-2`">
-                    <h2 class="fw-bold mb-4 mt-4 mt-lg-0 color-secondary">
-                      {{ phase.title }}
-                    </h2>
-                    <p class="pre-line font-light-black">
-                      {{ phase.description }}
-                    </p>
-                  </div>
-                  <div class="col-md-5 col-xxl-6">
-                    <img class="img-fluid" :src="phase.image" alt="phase image" />
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="py-3 text-center">          
-              <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" to="/">
-                {{ phase.btn_text }}
+                <span><FontAwesomeIcon :icon="['fab', 'linkedin']" /></span>
+              </a>
+              -->
+            </div>
+            <div class="action-btns">
+              <NuxtLink to="/" class="btn btn-lg btn-primary rounded-pill btn-mrgn" role="button">
+                Запази час
+              </NuxtLink>
+              <NuxtLink to="/certificates" class="btn btn-lg btn-primary rounded-pill">
+                Виж сертификати
               </NuxtLink>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="arrow-down-animated" :class="{ 'arrow--hidden': !showArrow }">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============================================-->
+    <!-- <section> ФАЗИ =============================-->
+    <!-- ============================================-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-3">
+            <div 
+              class="opacity-75 bg-holder bg-size"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/phases-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+            >
+            </div>
+            <h1 class="text-center">Фази на промяната</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-0">
+      <div class="container">
+        <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
+          <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('reality')">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon-box text-center">
+                <div class="text-decoration-none">
+                  <img class="mb-3 deparment-icon" src="~/assets/img/realnost-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/realnost-link.png" alt="..." />
+                  <p class="fs-1 fs-xxl-2 text-center">Реалност</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('initiative')">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon-box text-center">
+                <div class="text-decoration-none">
+                  <img class="mb-3 deparment-icon" src="~/assets/img/iniciativa-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/iniciativa-link.png" alt="..." />
+                  <p class="fs-1 fs-xxl-2 text-center">Инициатива</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @click="goto('analysis')">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon-box text-center">
+                <div class="text-decoration-none">
+                  <img class="mb-3 deparment-icon" src="~/assets/img/analiz-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/analiz-link.png" alt="..." />
+                  <p class="fs-1 fs-xxl-2 text-center">Анализ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('solution')">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon-box text-center">
+                <div class="text-decoration-none">
+                  <img class="mb-3 deparment-icon" src="~/assets/img/reshenie-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/reshenie-link.png" alt="..." />
+                  <p class="fs-1 fs-xxl-2 text-center">Решение</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================-->
+    <!-- <section> ФАЗИ ТЕКСТ =======================-->
+    <!-- ============================================-->
+    <!-- <Phase v-for="(phase, index) in phases" :key="index" :phase="phase" /> -->
+    <section class="phases">
+      <div v-for="(phase, index) in phases" :key="index" :phase="phase">
+        <section class="bg-secondary" :ref="`${phase.ref}`">
+          <div 
+            class="bg-holder"
+            :style="{'background-image':`url(${require('@/assets/img/gallery/bg-eye-care.png')})`, 'background-position':'center', 'background-size':'contain'}"
+          >
+          </div>
+          <div class="container">
+            <div class="row align-items-center">
+              <div :class="`col-md-7 col-xxl-6 text-center text-md-start order-md-${index%2} order-2`">
+                <h2 class="fw-bold mb-4 mt-4 mt-lg-0 color-secondary">
+                  {{ phase.title }}
+                </h2>
+                <p class="pre-line font-light-black">
+                  {{ phase.description }}
+                </p>
+              </div>
+              <div class="col-md-5 col-xxl-6">
+                <img class="img-fluid" :src="phase.image" alt="phase image" />
+              </div>
+            </div>
+          </div>
         </section>
-        <!-- ============================================-->
-        <!-- <section> ДЕЙНОСТИ КРАЙ ============================-->
-      
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div 
-                class="opacity-75 bg-holder bg-size deinosti-shadow"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/deinosti-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
-              >
-              </div>
-              <h1 class="text-center">Резюме и дейности</h1>
-            </div>
-          </div>
+        <div class="py-3 text-center">          
+          <NuxtLink class="btn btn-sm btn-outline-primary rounded-pill ms-lg-4" to="/">
+            {{ phase.btn_text }}
+          </NuxtLink>
         </div>
-      </section>
-      <section class="deinosti">
-        <div 
-            class="bg-holder bg-size"
-            :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
-        >
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3 text-center font-black paragr">
-                Петя Димова е практикуващ Фамилен психолог и Семеен консултант. Провежда индивидуални консултации и терапия. 
-                Работи с двойки, деца и семейства при:
-            </div>
-            <div class="col-12 col-lg-8 m-auto">
-              <ul class="accordion-dropdown list-group">
-                <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ============================================-->
-      <!-- <section> СТЪПКИ ============================-->
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 py-3">
-              <div 
-                class="opacity-75 bg-holder bg-size"
-                :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
-              >
-              </div>
-              <h1 class="text-center">Записване на час</h1>
+    <!-- ============================================-->
+    <!-- <section> ДЕЙНОСТИ =========================-->
+    <!-- ============================================-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-3">
+            <div 
+              class="opacity-75 bg-holder bg-size deinosti-shadow"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/deinosti-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+            >
             </div>
+            <h1 class="text-center">Резюме и дейности</h1>
           </div>
         </div>
-      </section>
-      <section class="appointment-steps">
-        <div 
-            class="bg-holder bg-size"
-            :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
-        >
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-            <LandingStep v-for="step in steps" :key="step.index" :step="step" />
+      </div>
+    </section>
+    <section class="deinosti">
+      <div 
+          class="bg-holder bg-size"
+          :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
+      >
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 offset-lg-3 text-center font-black paragr">
+              Петя Димова е практикуващ Фамилен психолог и Семеен консултант. Провежда индивидуални консултации и терапия. 
+              Работи с двойки, деца и семейства при:
           </div>
-          <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="arrow1 position-absolute"
-            alt=""
-          />
-          <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="arrow2 position-absolute"
-            alt=""
-          />
+          <div class="col-12 col-lg-8 m-auto">
+            <ul class="accordion-dropdown list-group">
+              <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
+            </ul>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-    </div>
+    <!-- ============================================-->
+    <!-- <section> СТЪПКИ ===========================-->
+    <!-- ============================================-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 py-3">
+            <div 
+              class="opacity-75 bg-holder bg-size"
+              :style="{'background-image':`url(${require('@/assets/img/gallery/appointment-shadow2.png')})`, 'background-position':'top center', 'background-size':'contain'}"
+            >
+            </div>
+            <h1 class="text-center">Записване на час</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="appointment-steps">
+      <div 
+        class="bg-holder bg-size"
+        :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
+      >
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <LandingStep v-for="step in steps" :key="step.index" :step="step" />
+        </div>
+        <img
+          :src="require('~/assets/img/getting-started/arrow.png')"
+          class="arrow1 position-absolute"
+          alt=""
+        />
+        <img
+          :src="require('~/assets/img/getting-started/arrow.png')"
+          class="arrow2 position-absolute"
+          alt=""
+        />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -277,7 +275,7 @@ export default {
     data() {
         return {
             phases: [
-              {
+              /* {
                   "title": "Заобикалящата ни РЕАЛНОСТ",
                   "description": "На базата на житейския опит и личните ни убеждения се формира обективната представа за заобикалящата ни реалност. Начинът на мислене, преживяното и наученото оказват силно влияние върху решенията ни във всеки един момент от нашето битие. Понякога е трудно да се самонаблюдаваме и имаме нужда от оценка, която обикновено получаваме от хората около нас… или често се затваряме от невъзможността да бъдем разбрани от социалните групи към които принадлежим…\r\n\r\nКак да определим кои възгледи и принципи са правилни във всяка една ситуация? Може ли нашите дълбоко вкоренени убеждения да ни отдалечават от успеха, криейки проблемите дълбоко в несъзнаваното? \r\n\r\nРано или късно, задавайки си тези въпроси, сме направили правилната стъпка - сами и с помощта на своя личен психолог да преодолеем изпитанията, да променим това, което не ни харесва, да решим проблемите си.",
                   "ref": "reality",
@@ -304,10 +302,10 @@ export default {
                   "ref": "solution",
                   "btn_text": "Запиши час сега",
                   "image": "1776.png"
-              }
+              } */
             ],
             accordions: [
-                {
+                /*{ 
                     "title": "Кризи и проблеми в отношенията",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
                 },
@@ -346,10 +344,10 @@ export default {
                 {
                     "title": "Управление на гнева",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
-                }
+                } */
             ],
             steps: [
-                {
+                /* {
                     "title": "Виж календара",
                     "description": "Ето тук (линк) можеш да видиш графика ми и да видиш свободните ми часове.",
                     "image": "steps1.png"
@@ -363,22 +361,22 @@ export default {
                     "title": "Запази час",
                     "description": "Натисни върху часа, който те устройва, и напиши името си.",
                     "image": "steps3.png"
-                }
+                } */
             ],
             showArrow: true,
             lastScrollPosition: 0
         };
     },
     mounted() {
-        window.addEventListener("scroll", this.onScroll);
+        window.addEventListener("scroll", this.onScroll)
     },
     beforeDestroy() {
-        window.removeEventListener("scroll", this.onScroll);
+        window.removeEventListener("scroll", this.onScroll)
     },
     methods: {
         goto(refName) {
-            const element = this.$refs[refName][0];
-            const top = element.offsetTop;
+            const element = this.$refs[refName][0]
+            const top = element.offsetTop + 1500 // + window.innerHeight
             window.scrollTo({
               top: top,
               left: 0,
@@ -386,12 +384,12 @@ export default {
             })
         },
         onScroll() {
-            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
             if (currentScrollPosition < 0) {
                 return;
             }
-            this.showArrow = currentScrollPosition < this.lastScrollPosition;
-            this.lastScrollPosition = currentScrollPosition;
+            this.showArrow = currentScrollPosition < this.lastScrollPosition
+            this.lastScrollPosition = currentScrollPosition
         }
     },
     components: { Accordion }
@@ -416,6 +414,27 @@ export default {
   @media only screen and (max-width: 1668px) {
     .appointment-steps img.arrow1, .appointment-steps img.arrow2 {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 488px) {
+    .btn-mrgn {
+      margin-bottom: 10px;
+    }
+  }
+  @media only screen and (min-width: 489px) and (max-width: 767px) {
+    .btn-mrgn {
+      margin-bottom: 0px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .btn-mrgn {
+      margin-bottom: 10px;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .btn-mrgn {
+      margin-bottom: 0px;
     }
   }
 

@@ -1,31 +1,6 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.transform-fade-down-enter-active,
-.transform-fade-down-leave-active {
-  @apply transition-all translate-y-0 duration-300;
-}
-.transform-fade-down-enter, .transform-fade-down-leave-to {
-  @apply opacity-0 transform -translate-y-2;
-}
-
-.paragraph {
-  @apply text-gray-700 tracking-wide leading-relaxed;
-}
-
-.text-header-gradient {
-  background: rgb(57, 132, 244);
-  background: linear-gradient(169.4deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
- */
-
- /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                                 Theme                                      */
 /* -------------------------------------------------------------------------- */
-/* prettier-ignore */
 /* -------------------------------------------------------------------------- */
 /*                                  Utilities                                 */
 /* -------------------------------------------------------------------------- */
@@ -18602,10 +18577,9 @@ ul.accordion-dropdown li button {
   border: none;
 }
 
-  .card .card-img-top {
-    cursor: pointer;
-  }
-
+.card .card-img-top {
+  cursor: pointer;
+}
 
 .appointment-steps img.arrow1 {
   top: 120px;

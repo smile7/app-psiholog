@@ -2,7 +2,7 @@ export default {
   head: {
     title: 'Петя Димова - семеен психолог',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'bg',
     },
     meta: [
       { charset: 'utf-8' },
@@ -14,9 +14,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-16.png' }
     ],
     script: [
-      { type: 'text/javascript', src: "https://code.jquery.com/jquery-3.6.0.min.js" },
-      { type: 'text/javascript', src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" }
-      // { type: 'text/javascript', src: 'js/bootstrap-navbar.js', body: true },
+      { type: 'text/javascript', src: 'js/jquery-3.6.0.min.js', body: true },
+      { type: 'text/javascript', src: 'js/bootstrap.min.js', body: true },
     ]
   },
   css: [
@@ -80,4 +79,8 @@ export default {
       },
     },
   },
+  loading: {
+    color: '#283779',
+    height: '4px'
+  }
 }
