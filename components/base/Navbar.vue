@@ -1,6 +1,6 @@
 <template>
   <!-- fixed-top class on nav removed -->
-  <header>
+  <!-- <header> -->
     <nav 
       class="navbar navbar-expand-lg navbar-light py-3 d-block" 
       data-navbar-on-scroll="data-navbar-on-scroll"
@@ -45,7 +45,7 @@
         </div>
       </div>
     </nav>
-  </header>
+  <!-- </header> -->
 </template>
 
 <script>

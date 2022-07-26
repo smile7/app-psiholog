@@ -14,7 +14,7 @@
           </div>
         </div>
       </section>
-      <article>
+      <section>
         <div 
             class="bg-holder bg-size"
             :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </section>
     </div>
 </template>
 

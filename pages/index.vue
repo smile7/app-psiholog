@@ -79,7 +79,7 @@
       </div>
     </section>
 
-    <article class="py-0">
+    <section class="py-0">
       <div class="container">
         <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
           <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('reality')">
@@ -128,13 +128,13 @@
           </div>
         </div>
       </div>
-    </article>
+    </section>
 
     <!-- ============================================-->
     <!-- <section> ФАЗИ ТЕКСТ =======================-->
     <!-- ============================================-->
     <!-- <Phase v-for="(phase, index) in phases" :key="index" :phase="phase" /> -->
-    <article class="phases">
+    <section class="phases">
       <div v-for="(phase, index) in phases" :key="index" :phase="phase">
         <section class="bg-secondary" :ref="`${phase.ref}`">
           <div 
@@ -164,7 +164,7 @@
           </NuxtLink>
         </div>
       </div>
-    </article>
+    </section>
 
     <!-- ============================================-->
     <!-- <section> ДЕЙНОСТИ =========================-->
@@ -183,7 +183,7 @@
         </div>
       </div>
     </section>
-    <article class="deinosti">
+    <section class="deinosti">
       <div 
           class="bg-holder bg-size"
           :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -202,7 +202,7 @@
           </div>
         </div>
       </div>
-    </article>
+    </section>
 
     <!-- ============================================-->
     <!-- <section> СТЪПКИ ===========================-->
@@ -221,7 +221,7 @@
         </div>
       </div>
     </section>
-    <article class="appointment-steps">
+    <section class="appointment-steps">
       <div 
         class="bg-holder bg-size"
         :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -242,7 +242,7 @@
           alt="arrow 2"
         />
       </div>
-    </article>
+    </section>
   </div>
 </template>
 

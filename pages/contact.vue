@@ -23,7 +23,7 @@
       <!-- ============================================-->
       <!-- <section> ФОРМА ЗА КОНТАКТ =================-->
       <!-- ============================================-->
-      <article class="py-8">
+      <section class="py-8">
         <div class="container">
           <div class="row">
             <div
@@ -119,7 +119,7 @@
             </div>
           </div>
         </div>
-      </article>
+      </section>
     </div>
 </template>
 

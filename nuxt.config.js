@@ -35,7 +35,8 @@ export default {
     // baseURL: 'http://104.248.18.158/api'
     // baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:800/api' : 'http://104.248.18.158/api'
     proxy: true,
-    prefix: process.env.API_URL
+    // prefix: process.env.API_URL
+    prefix: process.env.NODE_ENV !== 'production' ? process.env.API_URL : process.env.API_URL_PRODUCTION
   },
   proxy: {
     "http://localhost:3000/api/captcha-api/": {
