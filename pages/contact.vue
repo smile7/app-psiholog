@@ -23,7 +23,7 @@
       <!-- ============================================-->
       <!-- <section> ФОРМА ЗА КОНТАКТ =================-->
       <!-- ============================================-->
-      <section class="py-8">
+      <article class="py-8">
         <div class="container">
           <div class="row">
             <div
@@ -119,12 +119,24 @@
             </div>
           </div>
         </div>
-      </section>
+      </article>
     </div>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Контакти",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
+    }
+  },
   scrollToTop: true,
   name: "Contact",
   props: {

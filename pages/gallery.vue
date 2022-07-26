@@ -26,6 +26,7 @@
       </div>
       <div class="container">
         <div class="row">
+          <h1 class="d-none">Сертификати</h1>
           <!-- <Gallery v-for="image in images" :key="image.index" :image="image" /> -->
           <client-only>
             <LightGallery
@@ -43,7 +44,7 @@
               <div class="card h-100 shadow card-span rounded-3">
                 <!-- <img class="card-img-top rounded-3" src="~/assets/img/galeria/sgrada.jpg" alt="news" /> -->
                 <!-- <img :src="require(`~/assets/img/galeria/${image.image}`)" alt="gallery" /> -->
-                <img class="card-img-top rounded-top-3" :src="thumb.url" alt="photo" />
+                <img class="card-img-top rounded-top-3" :src="thumb.url" :alt="thumb.title" />
               </div>
             </div>
           </client-only>
@@ -55,6 +56,11 @@
 
 <script>
 export default {
+    head() {
+      return {
+        title: "Галерия - Петя Димова"
+      }
+    },
     scrollToTop: true,
     data() {
         return {

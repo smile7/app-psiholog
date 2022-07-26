@@ -9,18 +9,18 @@
       <div class="container">
         <div class="row min-vh-xl-100 min-vh-xxl-25">
           <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end">
-            <img class="pt-7 pt-md-0 petya-circle" src="~/assets/img/petya-circle.png" alt="hero-header" />
+            <img class="pt-7 pt-md-0 petya-circle" src="~/assets/img/petya-circle.png" alt="заглавна снимка на Петя" />
           </div>
           <div class="col-md-7 col-xl-6 col-xxl-5 text-md-start text-center py-6">
-            <h1 class="fw-light font-base fs-6 fs-xxl-7">
+            <h1 class="fw-light font-base fs-6 fs-xxl-7 mb-4">
               Фамилен Психолог
               <br/>
               <strong>Петя Димова</strong>
             </h1>
-            <p class="fs-1 mb-4 font-light-black">
+            <h2 class="fs-1 mb-4 font-light-black">
                Петя Димова е практикуващ фамилен психолог и семеен консултант. Работи с двойки и семейства, 
                провежда индивидуални консултации и терапия. 
-            </p>
+            </h2>
             <div class="social-icons spinned mb-4">
               <a 
                 class="item facebook" 
@@ -79,15 +79,15 @@
       </div>
     </section>
 
-    <section class="py-0">
+    <article class="py-0">
       <div class="container">
         <div class="row py-5 align-items-center justify-content-center justify-content-lg-evenly">
           <div class="col-auto col-md-4 col-lg-auto text-xl-start pointer" @click="goto('reality')">
             <div class="d-flex flex-column align-items-center">
               <div class="icon-box text-center">
                 <div class="text-decoration-none">
-                  <img class="mb-3 deparment-icon" src="~/assets/img/realnost-link.png" alt="..." />
-                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/realnost-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon" src="~/assets/img/realnost-link.png" alt="икона реалност" />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/realnost-link.png" alt="икона реалност" />
                   <p class="fs-1 fs-xxl-2 text-center">Реалност</p>
                 </div>
               </div>
@@ -97,8 +97,8 @@
             <div class="d-flex flex-column align-items-center">
               <div class="icon-box text-center">
                 <div class="text-decoration-none">
-                  <img class="mb-3 deparment-icon" src="~/assets/img/iniciativa-link.png" alt="..." />
-                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/iniciativa-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon" src="~/assets/img/iniciativa-link.png" alt="икона инициатива" />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/iniciativa-link.png" alt="икона инициатива" />
                   <p class="fs-1 fs-xxl-2 text-center">Инициатива</p>
                 </div>
               </div>
@@ -108,8 +108,8 @@
             <div class="d-flex flex-column align-items-center">
               <div class="icon-box text-center">
                 <div class="text-decoration-none">
-                  <img class="mb-3 deparment-icon" src="~/assets/img/analiz-link.png" alt="..." />
-                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/analiz-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon" src="~/assets/img/analiz-link.png" alt="икона анализ" />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/analiz-link.png" alt="икона анализ" />
                   <p class="fs-1 fs-xxl-2 text-center">Анализ</p>
                 </div>
               </div>
@@ -119,8 +119,8 @@
             <div class="d-flex flex-column align-items-center">
               <div class="icon-box text-center">
                 <div class="text-decoration-none">
-                  <img class="mb-3 deparment-icon" src="~/assets/img/reshenie-link.png" alt="..." />
-                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/reshenie-link.png" alt="..." />
+                  <img class="mb-3 deparment-icon" src="~/assets/img/reshenie-link.png" alt="икона решение" />
+                  <img class="mb-3 deparment-icon-hover" src="~/assets/img/reshenie-link.png" alt="икона решение" />
                   <p class="fs-1 fs-xxl-2 text-center">Решение</p>
                 </div>
               </div>
@@ -128,13 +128,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
     <!-- ============================================-->
     <!-- <section> ФАЗИ ТЕКСТ =======================-->
     <!-- ============================================-->
     <!-- <Phase v-for="(phase, index) in phases" :key="index" :phase="phase" /> -->
-    <section class="phases">
+    <article class="phases">
       <div v-for="(phase, index) in phases" :key="index" :phase="phase">
         <section class="bg-secondary" :ref="`${phase.ref}`">
           <div 
@@ -153,7 +153,7 @@
                 </p>
               </div>
               <div class="col-md-5 col-xxl-6">
-                <img class="img-fluid" :src="phase.image" alt="phase image" />
+                <img class="img-fluid" :src="phase.image" :alt="phase.title" />
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@
           </NuxtLink>
         </div>
       </div>
-    </section>
+    </article>
 
     <!-- ============================================-->
     <!-- <section> ДЕЙНОСТИ =========================-->
@@ -183,7 +183,7 @@
         </div>
       </div>
     </section>
-    <section class="deinosti">
+    <article class="deinosti">
       <div 
           class="bg-holder bg-size"
           :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -202,7 +202,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
     <!-- ============================================-->
     <!-- <section> СТЪПКИ ===========================-->
@@ -221,7 +221,7 @@
         </div>
       </div>
     </section>
-    <section class="appointment-steps">
+    <article class="appointment-steps">
       <div 
         class="bg-holder bg-size"
         :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -234,15 +234,15 @@
         <img
           :src="require('~/assets/img/getting-started/arrow.png')"
           class="arrow1 position-absolute"
-          alt=""
+          alt="arrow 1"
         />
         <img
           :src="require('~/assets/img/getting-started/arrow.png')"
           class="arrow2 position-absolute"
-          alt=""
+          alt="arrow 2"
         />
       </div>
-    </section>
+    </article>
   </div>
 </template>
 
@@ -568,4 +568,7 @@ export default {
     }
   }
 
+  h2 {
+    font-weight: normal;
+  }
 </style>

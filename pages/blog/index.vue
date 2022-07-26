@@ -14,7 +14,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <article>
         <div 
             class="bg-holder bg-size"
             :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -24,7 +24,7 @@
           <div class="row">
             <div v-for="post in posts" :key="post.index" :post="post" class="col-sm-6 col-lg-4 mb-4">
               <div class="card h-100 shadow card-span rounded-3">
-                <img class="card-img-top rounded-top-3" :src="post.image" alt="news" />
+                <img class="card-img-top rounded-top-3" :src="post.image" :alt="post.title" />
                 <div class="card-body">
                     <!-- <span class="fs--1 text-primary me-3">Семейство</span> -->
                     <svg class="bi bi-calendar2 me-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
@@ -41,12 +41,17 @@
             </div>
           </div>
         </div>
-      </section>
+      </article>
     </div>
 </template>
 
 <script>
 export default {
+    head() {
+      return {
+        title: "Блог"
+      }
+    },
     scrollToTop: true,
     async asyncData({ $axios, params }) {
         try {

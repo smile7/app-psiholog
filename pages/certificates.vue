@@ -18,7 +18,7 @@
     <!-- ============================================-->
     <!-- <section> ОБРАЗОВАНИЕ ======================-->
     <!-- ============================================-->
-    <section>
+    <article>
       <div 
           class="bg-holder bg-size"
               :style="{'background-image':`url(${require('@/assets/img/gallery/dot-bg.png')})`, 'background-position':'top left', 'background-size':'auto'}"
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
     <!-- ============================================-->
     <!-- <section> СЕРТИФИКАТИ ГАЛЕРИЯ ==============-->
@@ -63,6 +63,7 @@
       </div>
       <div class="container">
         <div class="row">
+          <h1 class="d-none">Сертификати</h1>
           <!-- <Certificate v-for="certificate in certificates" :key="certificate.index" :certificate="certificate" /> -->
           <client-only>
             <LightGallery
@@ -78,7 +79,7 @@
                 class="col-sm-6 col-lg-4 mb-4"
               >
                 <div class="card h-100 shadow card-span rounded-3">
-                    <img class="card-img-top rounded-top-3" :src="thumb.url" alt="certificate" />
+                    <img class="card-img-top rounded-top-3" :src="thumb.url" :alt="thumb.title" />
                     <div class="card-body">
                       <h5 class="font-base fs-lg-0 fs-xl-1 my-3">
                         {{ thumb.title }}
@@ -121,12 +122,12 @@
         <img
           :src="require('~/assets/img/getting-started/arrow.png')"
           class="arrow1 position-absolute"
-          alt=""
+          alt="arrow"
         />
         <img
           :src="require('~/assets/img/getting-started/arrow.png')"
           class="arrow2 position-absolute"
-          alt=""
+          alt="arrow"
         />
       </div>
     </section>
@@ -135,6 +136,11 @@
 
 <script>
 export default {
+    head() {
+      return {
+        title: "Сертификати - Петя Димова"
+      }
+    },
     scrollToTop: true,
     data() {
         return {
