@@ -32,26 +32,26 @@ export default {
     { src: '~/plugins/vue-scroll-indicator.client.js', mode: 'client' }
   ],
   axios: {
-    // baseURL: 'http://104.248.18.158/api'
+    baseURL: 'http://104.248.18.158/api'
     // baseURL: process.env.NODE_ENV !== 'production' ? 'http://localhost:800/api' : 'http://104.248.18.158/api'
-    proxy: true,
+    // proxy: true,
     // prefix: process.env.API_URL
-    prefix: process.env.NODE_ENV !== 'production' ? process.env.API_URL : process.env.API_URL_PRODUCTION
+    // prefix: process.env.NODE_ENV !== 'production' ? process.env.API_URL : process.env.API_URL_PRODUCTION
   },
-  proxy: {
+  // proxy: {
     // "http://localhost:3000/api/captcha-api/": {
-      "http://104.248.18.158/api/captcha-api/": {
+  /*     "http://104.248.18.158/api/captcha-api/": {
       target: "https://www.google.com/recaptcha/api",
       pathRewrite: {
         "^/captcha-api": ""
       },
       changeOrigin: true
-    },
+    }, */
     /* "/api/": {
       target: "http://localhost:8000/api/",
       pathRewrite: { "^/api/": "" }
     } */
-  },
+  // },
   components: true,
   buildModules: [
     // '@nuxtjs/eslint-module',
