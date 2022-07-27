@@ -39,11 +39,13 @@ export default {
     prefix: process.env.NODE_ENV !== 'production' ? process.env.API_URL : process.env.API_URL_PRODUCTION
   },
   proxy: {
-    "http://localhost:3000/api/captcha-api/": {
+    // "http://localhost:3000/api/captcha-api/": {
+      "http://104.248.18.158/api/captcha-api/": {
       target: "https://www.google.com/recaptcha/api",
       pathRewrite: {
         "^/captcha-api": ""
-      }
+      },
+      changeOrigin: true
     },
     /* "/api/": {
       target: "http://localhost:8000/api/",
